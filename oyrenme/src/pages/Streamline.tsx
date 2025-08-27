@@ -5,7 +5,7 @@ const Streamline:React.FC = () => {
   return (
     <section className='container'>
         <div className='row'>
-            <div className='Streamline-sides d-flex '>
+            <div className='Streamline-sides d-lg-flex '>
                 <div className='Streamline-left col-12 col-md-6  '>
                     <h1  className='Streamline-title '>Streamline Your <br /> Workflow with a CRM Solution</h1>
                     <article className='Streamline-article'>Our platform simplifies the process of managing <br /> and responding to customer inquiries and concerns <br /> by consolidating all of their interactions and data in <br /> one place.</article>

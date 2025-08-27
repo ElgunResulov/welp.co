@@ -1,11 +1,31 @@
+/* Genel stiller (örneğin, tüm cihazlar için) */
 h1,h2,h3{
     font-family: 'Merriweather', sans-serif;
     font-weight: 300;
     font-size: 3rem;
 }
+
+/* Yalnızca ekran genişliği 768 piksel veya daha az olduğunda uygulanacak stiller */
+
+
+/* Yalnızca ekran genişliği 480 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 480px) {
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Çok küçük cihazlar için daha da küçük font */
+    }
+}
+
 .whelp-total{
     background-color: #FEFBF6;
 }
+.black{
+    background-color: #141414;
+}
+.pink{
+    background-color: #F4E3FC;
+    margin:100px 0;
+}
+
 article{
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
@@ -20,7 +40,7 @@ header  {
     align-items: center;
     padding: 0 20px;      
 }
-.header-orientation a{
+.header-orientation li{
     padding: 0 20px;  
     text-decoration: none;
     color: #000;
@@ -40,6 +60,8 @@ header  {
     border-radius: 30px;
     
 }
+
+/* introduction start */
 .introduction-article{
     padding: 0 48px 20px;
     opacity: 0.7;
@@ -68,7 +90,7 @@ header  {
     position: absolute;
     top:118px;
     right: auto;    
-    z-index: -1;
+    z-index: 0 ;
 }
 .Introduction-left{
     padding-top: 113px;
@@ -78,8 +100,16 @@ header  {
 }
 .I-image{
     width: 100%;
-    height: 100%;
-}   
+    height: auto; /* Yüksekliği otomatik ayarla */
+    z-index: 999;
+}
+
+
+
+
+/* introduction end*/
+/* streamline start*/
+
 .Streamline-left  h1{
     margin: 20px 48px 30px  ;
 }
@@ -116,17 +146,19 @@ header  {
 }
 .Streamline-image{
     width: 80%;  
+    height: auto; /* Yüksekliği otomatik ayarla */
     padding-top: 68px;
 }
 
+/* Streamline end */
 /* Consolidate start  */
 .Consolidate-sides{
     padding:  60px 0 ;
 }
 .Consolidate-left img{
-    width: 518px;
-    height: 430px;
-    margin-left: 48px;
+    width: 100%; /* Genişliği %100 yap */
+    height: auto; /* Yüksekliği otomatik ayarla */
+    margin-left: 0; /* Kenar boşluğunu sıfırla */
 
 }
 .Consolidate-right article{
@@ -147,14 +179,52 @@ header  {
     border-radius: 60px;
     background-color: transparent;
 }
-a{
-    text-decoration: none;
-    color: #000;
+
+/* Yalnızca ekran genişliği 768 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 768px) {
+    .Streamline-left h1,
+    .Streamline-article,
+    .Streamline-left button {
+        margin-left: 20px; /* Daha az kenar boşluğu */
+        padding: 0 20px 20px; /* Daha az dolgu */
+    }
+    .Streamline-image {
+        width: 100%; /* Genişliği %100 yap */
+        padding-top: 20px; /* Daha az dolgu */
+    }
+    .Consolidate-sides {
+        flex-direction: column; /* Öğeleri alt alta sırala */
+        padding: 30px 0; /* Daha az dikey dolgu */
+    }
+    .Consolidate-left img {
+        width: 90%; /* Daha dar resim */
+        margin: 0 auto; /* Ortala */
+        display: block; /* Ortalamak için */
+    }
+    .Consolidate-right {
+        padding: 20px; /* Daha az dolgu */
+        text-align: center; /* Metni ortala */
+    }
+    .Consolidate-right h2,
+    .Consolidate-right article,
+    .Consolidate-right button {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
-
-
-
+/* Yalnızca ekran genişliği 480 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 480px) {
+    .Streamline-left h1,
+    .Streamline-article,
+    .Streamline-left button {
+        margin-left: 10px; /* Daha az kenar boşluğu */
+        padding: 0 10px 10px; /* Daha az dolgu */
+    }
+    .Consolidate-left img {
+        width: 95%; /* Daha dar resim */
+    }
+}
 
 /* Consolidate end */
 
@@ -188,6 +258,7 @@ a{
 }
 .Analyze-image{
     width: 80%;  
+    height: auto; /* Yüksekliği otomatik ayarla */
     padding-top: 68px;
 }
 /* analyze start */
@@ -198,10 +269,7 @@ a{
     padding: 90px 48px 20px;
     background-color: #F4E3FC;
 }
-.pink{
-    background-color: #F4E3FC;
-    margin:100px 0;
-}
+
 .WpIntroduce h3{ 
     margin: 20px 48px 30px  ;
     text-align: center;
@@ -232,6 +300,47 @@ a{
 }
 .WpIntroduceImgUnder {
     padding:0 0  70px 0 ;
+}
+
+/* Yalnızca ekran genişliği 768 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 768px) {
+    .Analyze-left h1,
+    .Analyze-article,
+    .Analyze-left button {
+        margin-left: 20px; /* Daha az kenar boşluğu */
+        padding: 0 20px 20px; /* Daha az dolgu */
+    }
+    .Analyze-image {
+        width: 100%; /* Genişliği %100 yap */
+        padding-top: 20px; /* Daha az dolgu */
+    }
+    .WpIntroduce {
+        padding: 50px 20px 20px; /* Daha az dolgu */
+    }
+    .WpIntroduce h3 {
+        margin: 20px auto 30px; /* Ortala ve boşlukları ayarla */
+        font-size: 30px; /* Daha küçük font */
+        text-align: center; /* Metni ortala */
+    }
+    .WpIntroduceImg {
+        margin: 20px auto 0; /* Ortala ve boşlukları ayarla */
+    }
+    .WpIntroduceImgUnder article {
+        width: 90%; /* Daha dar */
+    }
+}
+
+/* Yalnızca ekran genişliği 480 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 480px) {
+    .Analyze-left h1,
+    .Analyze-article,
+    .Analyze-left button {
+        margin-left: 10px; /* Daha az kenar boşluğu */
+        padding: 0 10px 10px; /* Daha az dolgu */
+    }
+    .WpIntroduce h3 {
+        font-size: 24px; /* Çok küçük cihazlar için daha küçük font */
+    }
 }
 
 /* WpIntroduce end */
@@ -269,3 +378,363 @@ a{
 }
 
 /* Communication start */
+/* DesignUnique start */
+
+.DesignUnique-left  h3{
+    margin: 20px 48px 30px  ;
+}
+.DesignUnique-left{
+    padding-top: 73px;
+    width: 500px;
+    height: 547px;
+    margin-right: 70px;
+}   
+
+.DesignUnique-article{
+    padding: 0 48px 20px;
+    opacity: 0.7;
+}
+.DesignUnique-left button {
+    margin-left: 46px;
+    margin-top: 5px;
+    width: max-content;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 28px;
+    padding-left: 28px;
+    border-radius: 60px;
+    background-color: transparent;
+}
+.DesignUnique-left button a {
+    text-decoration: none;
+    color: #000;
+}
+.DesignUnique-image{
+    width: 80%;  
+    height: auto; /* Yüksekliği otomatik ayarla */
+    padding-top: 115px;
+
+}
+/*DesignUnique end  */
+/* WhyWhelp start  */
+.Whywhelp-box{
+    margin-right: 50px;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 48px 20px;
+    width: 370px;
+    height: 150px;
+    background-color: hwb(0 0% 100% / 0.285);
+    border-radius: 10px;
+
+}
+.Whywhelp-box article{
+    color: #fff;
+}
+.WhyWhelp h3 {
+    margin: 40px 0 30px  ;
+    text-align: center;
+    font-size: 50px;
+    color: #fff;
+
+}
+.Whywhelp-box article {
+    font-size: 15px;
+    
+}
+.WhyWhelpTotal{
+    padding-bottom: 50px;
+}
+.percent{
+    font-size: 50px !important;
+    color: #A4D1F9 !important;
+}
+.Whywhelp-box article:last-child{
+    padding-bottom: 30px;
+}
+.Whywhelp-box article:first-child{
+    padding-top: 10px;
+}
+/* WhyWhelp end  */
+
+/* exploreIntegration start  */
+
+.ExploreIntegrationsImagebox img{
+    width: 400px;
+    height: 300px;
+
+}
+.ExploreIntegrationsLeft{
+    padding-top: 120px;
+    
+}
+
+
+
+
+
+/* exploreIntegration end */
+
+
+
+/* navbar start */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* space-x-6 */
+  background-color: white;
+  padding: 1rem; /* p-4 */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-label {
+  color: #374151; /* text-gray-700 */
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem; /* space-x-1 */
+}
+
+.dropdown-icon {
+  width: 1rem; /* w-4 */
+  height: 1rem; /* h-4 */
+  color: #6b7280; /* text-gray-500 */
+  transition: transform 0.2s;
+}
+
+.nav-item:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 0;
+  margin-top: 0.5rem; /* mt-2 */
+  display: none;
+  width: 10rem; /* w-40 */
+  background: white;
+  border-radius: 0.5rem; /* rounded-lg */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-list {
+  padding: 0.5rem 0; /* py-2 */
+  font-size: 0.875rem; /* text-sm */
+  color: #374151;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem; /* px-4 py-2 */
+  cursor: pointer;
+}
+
+.dropdown-item:hover {
+  background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+.dropdown-toggle{
+    color: #000;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+    background-color: transparent !important;
+}
+
+/* navbar end */
+
+/* Yalnızca ekran genişliği 768 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 768px) {
+    .Communication-sides {
+        flex-direction: column; /* Öğeleri alt alta sırala */
+        padding: 30px 0; /* Daha az dikey dolgu */
+    }
+    .Communication-left img {
+        width: 90%; /* Daha dar resim */
+        height: auto; /* Yüksekliği otomatik ayarla */
+        margin: 0 auto; /* Ortala */
+        display: block; /* Ortalamak için */
+    }
+    .Communication-right {
+        padding: 20px; /* Daha az dolgu */
+        text-align: center; /* Metni ortala */
+    }
+    .Communication-right h3,
+    .Communication-right article,
+    .Communication-right button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .DesignUnique-left h3,
+    .DesignUnique-article,
+    .DesignUnique-left button {
+        margin-left: 20px; /* Daha az kenar boşluğu */
+        padding: 0 20px 20px; /* Daha az dolgu */
+    }
+    .DesignUnique-image {
+        width: 100%; /* Genişliği %100 yap */
+        padding-top: 20px; /* Daha az dolgu */
+    }
+    .DesignUnique-left {
+        width: 100%; /* Tam genişlik */
+        height: auto; /* Yüksekliği otomatik */
+        margin-right: 0; /* Kenar boşluğunu sıfırla */
+        padding-top: 20px;
+    }
+    .I-background{
+        
+        position: relative;
+        top: 78px; /* Arka plan resmini gizle */
+    }
+    .Consolidate-sides ,.Communication-sides{
+        flex-direction: column-reverse; 
+    }
+}
+
+/* Yalnızca ekran genişliği 480 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 480px) {
+    .Communication-left img {
+        width: 95%; /* Daha dar resim */
+    }
+    .DesignUnique-left h3,
+    .DesignUnique-article,
+    .DesignUnique-left button {
+        margin-left: 10px; /* Daha az kenar boşluğu */
+        padding: 0 10px 10px; /* Daha az dolgu */
+    }
+}
+
+/* Yalnızca ekran genişliği 768 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 768px) {
+    .Whywhelp-box {
+        width: 90%; /* Daha dar kutu */
+        margin: 20px auto; /* Ortala ve boşlukları ayarla */
+        padding: 20px; /* Daha az dolgu */
+    }
+    .WhyWhelp h3 {
+        font-size: 38px; /* Daha küçük font */
+        margin: 20px auto 20px; /* Ortala ve boşlukları ayarla */
+    }
+    .WhyWhelpTotal {
+        padding-bottom: 20px;
+    }
+    .ExploreIntegrationsImagebox img {
+        width: 100%; /* Genişliği %100 yap */
+        height: auto; /* Yüksekliği otomatik ayarla */
+    }
+    .ExploreIntegrationsLeft {
+        padding-top: 50px; /* Daha az dolgu */
+        text-align: center; /* Metni ortala */
+    }
+}
+
+/* Yalnızca ekran genişliği 480 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 480px) {
+    .Whywhelp-box {
+        width: 95%; /* Daha dar kutu */
+    }
+    .WhyWhelp h3 {
+        font-size: 30px; /* Çok küçük cihazlar için daha küçük font */
+    }
+    h1, h2, h3 {
+        font-size: 1.5rem; /* Çok küçük cihazlar için daha da küçük font */
+    }
+    .Introduction-input {
+        width: 90%; /* Daha dar input */
+    }
+    .Introduction-button {
+        width: 90%; /* Düğmeyi daha geniş yap */
+        margin-left: 5%; /* Ortalamak için */
+    }
+}
+.Streamline-button a{
+    text-decoration: none;
+    color: #000;
+}
+@media (min-width: 1024px) {
+    .I-background{
+        width: 430px;
+        height: 493px;
+    }
+    .I-image{
+        position: absolute;
+        width: 25%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1, h2, h3 {
+        font-size: 2rem; /* Daha küçük başlık fontu */
+    }
+    .header-orientation {
+        flex-direction: column; /* Menü öğelerini alt alta sırala */
+        align-items: flex-start;
+        padding: 10px; /* Daha az dolgu */
+    }
+    .header-orientation li {
+        padding: 5px 0; /* Menü öğeleri arasında dikey boşluk */
+    }
+    .header-buttons {
+        flex-direction: column; /* Düğmeleri alt alta sırala */
+        align-items: flex-start;
+        padding: 10px;
+    }
+    .header-buttons .get-started {
+        margin-top: 10px; /* Düğmeler arasında boşluk */
+    }
+}
+/* Yalnızca ekran genişliği 768 piksel veya daha az olduğunda uygulanacak stiller */
+@media (max-width: 768px) {
+    .introduction-article {
+        padding: 0 20px 20px; /* Daha az dolgu */
+    }
+    .Introduction-input {
+        width: 80%; /* Daha dar input */
+        margin-left: 20px; /* Kenardan daha az boşluk */
+        position: static; /* Mutlak konumlandırmayı kaldır */
+    }
+    .Introduction-button {
+        position: static; /* Mutlak konumlandırmayı kaldır */
+        margin-top: 10px; /* Düğme için boşluk */
+        margin-left: 20px; /* Kenardan boşluk */
+        width: fit-content; /* Genişliği içeriğe sığdır */
+        border-radius: 30px; /* Yuvarlak kenarları koru */
+    }
+    .Introduction-left h1 {
+        margin: 20px 20px 30px; /* Daha az kenar boşluğu */
+    }
+    .I-background {
+        height: auto; /* Yüksekliği otomatik ayarla */
+        position: static; /* Mutlak konumlandırmayı kaldır */
+        top: auto;
+        right: auto;
+        width: 100%; /* Genişliği %100 yap */
+    }
+    .Introduction-right {
+        padding: 20px; /* Daha az dolgu */
+    }
+    .Introduction-left {
+        padding-top: 20px;
+    }
+    .I-image{
+    position: absolute; 
+    z-index: 999;
+    left: 0;
+    }
+    
+}
+
+

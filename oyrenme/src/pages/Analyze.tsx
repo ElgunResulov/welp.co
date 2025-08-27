@@ -1,11 +1,11 @@
 import React from 'react'
-import Button from './Button';
+import Button from '../components/Button';
     
 const Analyze:React.FC = () => {
   return (
     <section className='container'>
         <div className='row'>
-            <div className='Analyze-sides d-flex '>
+            <div className='Analyze-sides d-lg-flex '>
                 <div className='Analyze-left col-12 col-md-6  '>
                     <h1  className='Analyze-title '>Analyze Your <br /> Company's <br /> Performance with <br /> Advanced Reporting</h1>
                     <article className='Analyze-article'>Advanced reporting provides insights into your company's performance over any time range, helping you optimize your business operations.</article>

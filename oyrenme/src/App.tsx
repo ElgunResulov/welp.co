@@ -1,12 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import './App.css'
-import Header from './components/Header'
-import Introduction from "./components/Introduction"
-import Streamline from "./components/Streamline"
-import Consolidate from "./components/Consolidate"
-import Analyze from "./components/Analyze"
-import WpIntroduce from "./components/WpIntroduce"
-import Communication from "./components/Communication"
+import './data/salam.json'
+import Header from './pages/Header'
+import Introduction from "./pages/Introduction"
+import Streamline from "./pages/Streamline"
+import Consolidate from "./pages/Consolidate"
+import Analyze from "./pages/Analyze"
+import WpIntroduce from "./pages/WpIntroduce"
+import Communication from "./pages/Communication"
+import DesignUnique from "./pages/DesignUnique"
+import WhyWhelp from "./pages/WhyWhelp"
+import ExploreIntegrations from "./pages/ExploreIntegrations"
+import  Box  from "./pages/Box"
+// import Cards from "./components/Cards"
+
 
 function App() {
   return (
@@ -20,7 +27,15 @@ function App() {
         <WpIntroduce />
       </div>
         <Communication />
-
+        <DesignUnique />
+      <div className="black">
+        <WhyWhelp  />
+      </div>  
+      <ExploreIntegrations />
+      {/* <Cards /> */}
+      <Box/>
+      
+          
 
     </div>
   )
